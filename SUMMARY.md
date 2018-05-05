@@ -31,3 +31,9 @@
 * [Developer Guide](developers/developer-guide.md)
 * [Changelog](developers/changelog.md)
 
+## Contribute
+
+* [Report a Bug](https://github.com/Requarks/wiki/issues)
+* [Suggest a Feature](https://requests.requarks.io/wiki)
+* [Donate](https://opencollective.com/wikijs)
+
