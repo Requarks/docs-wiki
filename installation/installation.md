@@ -45,7 +45,15 @@ You'll be prompted where Wiki.js should be installed. The destination folder wil
 {% endtab %}
 
 {% tab title="Docker" %}
+#### Using the official Docker image
 
+```bash
+sudo docker run -p 8080:3000 -v /home/bob/wiki-config.yml:/var/wiki/config.yml requarks/wiki
+```
+
+#### Using a custom Dockerfile
+
+#### Using Docker Compose
 {% endtab %}
 
 {% tab title="Heroku" %}
