@@ -5,7 +5,7 @@
 ## Installation
 
 * Prerequisites
-* Installation
+* [Installation](installation/installation.md)
 
 ## Contribute
 
