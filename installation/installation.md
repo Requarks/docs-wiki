@@ -57,7 +57,7 @@ sudo docker run -p 8080:3000 -v /home/bob/wiki-config.yml:/var/wiki/config.yml r
 {% endtab %}
 
 {% tab title="Heroku" %}
-
+Deploy a new Wiki.js instance on Heroku using the [install wizard](https://heroku.com/deploy?template=https://github.com/requarks/wiki-heroku).
 {% endtab %}
 {% endtabs %}
 
