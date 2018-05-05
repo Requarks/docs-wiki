@@ -8,7 +8,7 @@ description: How to use blockquotes
 
 A blockquote is originally used to define a section that is quoted from another source. However, Wiki.js offers many additional options to the blockquote.
 
-##  How to define a blockquote {#how-to-define-a-blockquote}
+## How to define a blockquote {#how-to-define-a-blockquote}
 
 Simply begin your line of text with a **&gt;**
 
