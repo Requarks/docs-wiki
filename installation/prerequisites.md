@@ -4,7 +4,7 @@
 
 ### OS
 
-Wiki.js runs on virtually any system where Node.js is supported. This means it runs on Linux, macOS, Windows as well as container solutions such as Docker and Heroku.
+Wiki.js runs on virtually any system where Node.js is supported. This means it runs on **Linux**, **macOS**, **Windows** as well as container solutions such as **Docker** and **Heroku**.
 
 ### CPU
 
@@ -12,11 +12,13 @@ Wiki.js runs perfectly fine on a single CPU core. However, 2 cores or more are r
 
 ### RAM
 
-Linux systems should have at least 768 MB of RAM to run Wiki.js. Windows and macOS systems usually require more RAM.
+Linux systems should have at least **768 MB** of RAM to run Wiki.js. Windows and macOS systems usually require more RAM.
 
 ### Storage
 
 Storage requirements are based on the content you will enter. Wikis that consists almost exclusively of text are not likely to exceed a few megabytes. However, as soon as you upload images, videos or other files, you should plan your storage requirements accordingly.
+
+At least **1 GB** of storage dedicated to Wiki.js is recommended.
 
 ## Software Requirements
 
