@@ -24,6 +24,7 @@
 
 * [Change Account Password](user-guide/change-account-password.md)
 * [Keyboard Shortcuts](user-guide/keyboard-shortcuts.md)
+* [Blockquotes](user-guide/blockquotes.md)
 
 ## Developers
 
