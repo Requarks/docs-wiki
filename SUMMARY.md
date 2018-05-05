@@ -4,7 +4,7 @@
 
 ## Installation
 
-* Prerequisites
+* [Prerequisites](installation/prerequisites.md)
 * [Installation](installation/installation.md)
 
 ## Contribute
