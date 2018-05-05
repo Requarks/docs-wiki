@@ -18,7 +18,7 @@ Wiki.js will be installed in the current directory.
 {% tab title="macOS" %}
 **Create an empty folder** where Wiki.js should be installed.
 
-From this folder, in a command prompt, **run** the following command:
+In Terminal, navigate to the folder you just created and **run** the following command:
 
 ```bash
 curl -sSo- https://wiki.js.org/install.sh | bash
