@@ -12,7 +12,7 @@ From this folder, in a command prompt, **run** the following command:
 curl -sSo- https://wiki.js.org/install.sh | bash
 ```
 
- Wiki.js will be installed in the current directory.
+Wiki.js will be installed in the current directory.
 {% endtab %}
 
 {% tab title="macOS" %}
