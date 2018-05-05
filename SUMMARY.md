@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Documentation](README.md)
+* [Documentation 2.x](README.md)
 
 ## Installation
 
