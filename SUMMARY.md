@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Wiki.js Documentation 1.x](README.md)
+* [Documentation 1.x](README.md)
 
 ## Installation
 

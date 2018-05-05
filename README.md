@@ -1,4 +1,4 @@
-# Wiki.js Documentation 1.x
+# Documentation 1.x
 
 This is the documentation for Wiki.js 1.x.
 
