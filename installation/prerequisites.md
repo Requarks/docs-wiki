@@ -29,18 +29,32 @@ Node.js **8.11** or later is required. Wiki.js will not run on older versions su
 * ​[Official Website](https://nodejs.org/)​
 * ​[Installation using the package manager \(Linux\)](https://nodejs.org/en/download/package-manager/)​
 
+{% hint style="info" %}
+**Web Server**
+
+Wiki.js \(or any Node.js app\) can run without any actual web server \(such as nginx or Apache\). However, it is highly recommended to put a standard web server in front of Wiki.js. This ensures you can use features like SSL, multiple websites, caching, etc.
+{% endhint %}
+
 ### Database
 
-Wiki.js is compatible with the following database systems:
+Wiki.js is compatible with any of the following database systems:
 
 * MySQL **8.0** or later
 * MariaDB **10.2.7** or later
 * PostgreSQL **9.5** or later
 * SQLite **3.9** or later
 
+{% hint style="warning" %}
+SQLite is **not recommended** for mid to large deployments of Wiki.js.
+{% endhint %}
+
 ### Redis
 
 Redis **3.2** or later is required.
+
+* [Official Website](https://redis.io)
+
+For cloud-based services, a **512 MB** instance is sufficient.
 
 ## End-User Requirements
 

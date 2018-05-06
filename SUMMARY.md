@@ -7,13 +7,27 @@
 * [Prerequisites](installation/prerequisites.md)
 * [Installation](installation/installation.md)
 
+## Modules
+
+* Authentication
+* Editors
+* Logging
+* Storage
+* Search
+
+## Administration
+
+* Authentication
+
+## User Guide
+
+## Developers
+
+* Changelog
+
 ## Contribute
 
 * [Report a Bug](https://github.com/Requarks/wiki/issues)
 * [Suggest a New Feature](https://requests.requarks.io/wiki)
 * [Donate](https://opencollective.com/wikijs)
-
-## Administration
-
-* Authentication
 
