@@ -6,6 +6,8 @@
 
 * [Prerequisites](installation/prerequisites.md)
 * [Installation](installation/installation.md)
+* Upgrade
+* Troubleshooting
 
 ## Modules
 
