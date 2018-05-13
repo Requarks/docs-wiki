@@ -41,6 +41,7 @@ Wiki.js is compatible with any of the following database systems:
 
 * MySQL **8.0** or later
 * MariaDB **10.2.7** or later
+* MS SQL Server **2012** or later
 * PostgreSQL **9.5** or later
 * SQLite **3.9** or later
 
