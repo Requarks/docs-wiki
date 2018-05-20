@@ -45,7 +45,7 @@ Your powershell execution policy must be set to Bypass to allow this script to r
 
 Once the installation is completed, you'll be prompted to run the configuration wizard.
 
-Start the configuration wizard by running the command `node wiki configure`. To use a custom port, use the following command: `node wiki configure 1234` where 1234 is the custom port.
+To start the configuration wizard manually, run the command `node wiki configure`. To use a custom port, use the following command: `node wiki configure 1234` where 1234 is the custom port.
 
 Using your web browser, navigate to [http://localhost:3000/](http://localhost:3000/) \(replace `localhost` with the IP of your server / custom port if applicable\) and follow the on-screen instructions.
 
