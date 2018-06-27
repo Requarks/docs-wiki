@@ -11,6 +11,10 @@ description: How to upgrade to the latest version of Wiki.js
 * Verify that all content have been synced to the remote git repository.
 * Read the release notes of the latest release carefully, in case special upgrade instructions steps are provided.
 
+{% hint style="danger" %}
+If you disabled git synchronization, you must make sure to manually backup your /repo folder before proceeding with the steps below. You will then need to restore that folder upon completion.
+{% endhint %}
+
 ## Upgrade
 
 1. Make a backup of your `config.yml` to a secure location.
@@ -18,4 +22,6 @@ description: How to upgrade to the latest version of Wiki.js
 3. [Install the latest version](installation/).
 4. Copy your `config.yml` backup file to its original location, at the root of your Wiki.js installation folder.
 5. Start Wiki.js: `node wiki start`
+
+
 
