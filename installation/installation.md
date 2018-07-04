@@ -37,7 +37,7 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://wiki.js.org/insta
 You'll be prompted where Wiki.js should be installed. The destination folder will be created automatically if it doesn't exist.
 
 {% hint style="info" %}
-**Execution Policy**
+**Execution Policy**
 
 Your powershell execution policy must be set to Bypass to allow this script to run:  
 `Set-ExecutionPolicy Bypass`

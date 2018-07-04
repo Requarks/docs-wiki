@@ -6,26 +6,30 @@
 
 * [Prerequisites](installation/prerequisites.md)
 * [Installation](installation/installation.md)
-* Upgrade
-* Troubleshooting
+* [Upgrade](installation/upgrade.md)
+* [Troubleshooting](installation/troubleshooting.md)
 
 ## Modules
 
-* Authentication
-* Editors
-* Logging
-* Storage
-* Search
+* [Authentication](modules/authentication.md)
+* [Editors](modules/editors.md)
+* [Logging](modules/logging.md)
+* [Storage](modules/storage.md)
+* [Search](modules/search.md)
 
 ## Administration
 
-* Authentication
+* [Authentication](administration/authentication.md)
 
 ## User Guide
 
 ## Developers
 
-* Changelog
+* [Modules](developers/modules/README.md)
+  * [Authentication](developers/modules/authentication.md)
+  * [Storage](developers/modules/storage.md)
+  * [Properties](developers/modules/properties.md)
+* [Changelog](developers/changelog.md)
 
 ## Contribute
 
