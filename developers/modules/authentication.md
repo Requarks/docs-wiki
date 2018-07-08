@@ -1,6 +1,15 @@
 # Authentication
 
-### Base Class Example
+An authentication module adds new ways for users to login to the application. It consists of properties that can be set by the user as well as methods that are called on certain events \(e.g. during initialization\).
+
+Authentication modules are located in `/server/modules/authentication`.
+
+A unique folder is created for each module. The folder contains two files:
+
+* **definition.yml**
+* **authentication.js**
+
+## definition.yml
 
 ```javascript
 /* global WIKI */
