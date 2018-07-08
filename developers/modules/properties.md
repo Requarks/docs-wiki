@@ -14,27 +14,31 @@ Only the following types are allowed:
 
 ### Example
 
-```javascript
-{
-    exampleProperty: String,
-    anotherProperty: Number,
-    propertyWithDefault: {
+{% code-tabs %}
+{% code-tabs-item title="definition.yml" %}
+```yaml
+props:
+    exampleProperty: String
+    anotherProperty: Number
+    propertyWithDefault:
+        type: Boolean
+        default: true
+    propertyWithEnumList:
         type: String,
-        default: 'abc'
-    },
-    propertyWithEnumList: {
-        type: String,
-        default: 'first',
-        enum: ['first', 'second', 'third']
-    }
-}
+        default: 'first'
+        enum:
+            - 'first'
+            - 'second'
+            - 'third'
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 ### Options
 
 #### type
 
-The type is **required**. It can be either the property direct value or as an object property named `type`. Must be one of the allowed types listed [above](properties.md#property-types).
+The type is **required**. It can be either the property direct value _\(as shown in the first two examples above\)_ or as an object property named `type`. Must be one of the allowed types listed [above](properties.md#property-types).
 
 #### default
 
