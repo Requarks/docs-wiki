@@ -79,12 +79,56 @@ Upon creation of a new page.
 async created (opts) { }
 ```
 
+Parameter **opts** is an object composed of the following properties:
+
+```javascript
+{
+    id: Number, // Unique ID of the page
+    path: String, // Unique path of the page (e.g. /some/page)
+    title: String, // Title of the page
+    description: String, // Short description of the page
+    isPublished: Boolean, // Is the page published
+    publishStartDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
+    publishEndDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
+    contentType: String, // The content original type (e.g. markdown, html, etc.)
+    content: String, // The content
+    createdAt: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
+    authorId: Number, // The Unique ID of the author
+    authorName: String, // The full name of the author
+    authorEmail: String // The email address of the author
+}
+```
+
 #### updated
 
 Upon modification of a page contents.
 
 ```javascript
 async updated (opts) { }
+```
+
+Parameter **opts** is an object composed of the following properties:
+
+```javascript
+{
+    id: Number, // Unique ID of the page
+    path: String, // Unique path of the page (e.g. /some/page)
+    title: String, // Title of the page
+    description: String, // Short description of the page
+    isPublished: Boolean, // Is the page published
+    publishStartDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
+    publishEndDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
+    contentType: String, // The content original type (e.g. markdown, html, etc.)
+    content: String, // The content
+    createdAt: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
+    updatedAt: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
+    authorId: Number, // The Unique ID of the author (user updating the page)
+    authorName: String, // The full name of the author (user updating the page)
+    authorEmail: String, // The email address of the author (user updating the page)
+    creatorId: Number, // The Unique ID of the user that first created the page
+    creatorName: String, // The full name of the user that first created the page
+    creatorEmail: String // The email address of the user that first created the page
+}
 ```
 
 #### deleted
@@ -95,11 +139,55 @@ Upon deletion of a page.
 async deleted (opts) { }
 ```
 
+Parameter opts is an object composed of the following properties:
+
+```javascript
+{
+    id: Number, // Unique ID of the page
+    path: String, // Unique path of the page (e.g. /some/page)
+    title: String, // Title of the page
+    description: String, // Short description of the page
+    createdAt: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
+    deletedAt: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
+    authorId: Number, // The Unique ID of the author (user deleting the page)
+    authorName: String, // The full name of the author (user deleting the page)
+    authorEmail: String, // The email address of the author (user deleting the page)
+    creatorId: Number, // The Unique ID of the user that first created the page
+    creatorName: String, // The full name of the user that first created the page
+    creatorEmail: String // The email address of the user that first created the page
+}
+```
+
 #### renamed
 
 Upon rename of a page or when a page is moved to another location.
 
 ```javascript
 async renamed (opts) { }
+```
+
+Parameter opts is an object composed of the following properties:
+
+```javascript
+{
+    id: Number, // Unique ID of the page
+    sourcePath: String, // Previous path of the page (e.g. /some/oldpage)
+    destinationPath: String, // New path of the page (e.g. /some/newpage)
+    title: String, // Title of the page
+    description: String, // Short description of the page
+    isPublished: Boolean, // Is the page published
+    publishStartDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
+    publishEndDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
+    contentType: String, // The content original type (e.g. markdown, html, etc.)
+    content: String, // The content
+    createdAt: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
+    updatedAt: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
+    authorId: Number, // The Unique ID of the author (user renaming the page)
+    authorName: String, // The full name of the author (user renaming the page)
+    authorEmail: String, // The email address of the author (user renaming the page)
+    creatorId: Number, // The Unique ID of the user that first created the page
+    creatorName: String, // The full name of the user that first created the page
+    creatorEmail: String // The email address of the user that first created the page
+}
 ```
 
