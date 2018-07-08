@@ -49,6 +49,8 @@ Upon activation of the storage module from the administration area. This is usua
 async activated (opts) { }
 ```
 
+Parameter **opts** is an object containing the configuration of the storage strategy. For example, if you defined properties `clientId` and `clientSecret` for the module props, `opts` will be an object with properties `clientId` and `clientSecret` containing the values entered by the user in the administration area.
+
 Any error thrown \(or returning a rejected promise\) will be reported to the user and the storage strategy will not be enabled.
 
 #### deactivated
@@ -59,6 +61,8 @@ Upon deactivation of the storage module from the administration area. This is wh
 async deactivated (opts) { }
 ```
 
+Parameter **opts** is an object containing the configuration of the storage strategy. See the [activated](storage.md#activated) event for more details.
+
 Any error thrown \(or returning a rejected promise\) will be reported to the user and the storage strategy will not be disabled.
 
 #### init
@@ -68,6 +72,8 @@ Upon initialization of Wiki.js \(both startups or restarts\) and directly after 
 ```javascript
 async init (opts) { }
 ```
+
+Parameter **opts** is an object containing the configuration of the storage strategy. See the [activated](storage.md#activated) event for more details.
 
 Any error thrown \(or returning a rejected promise\) will prevent the storage strategy from being used until Wiki.js is restarted or the error is acknowledged by the user in the administration area.
 
@@ -98,6 +104,8 @@ Parameter **opts** is an object composed of the following properties:
     authorEmail: String // The email address of the author
 }
 ```
+
+Any error thrown \(or returning a rejected promise\) will be logged but will not prevent the page from being created internally.
 
 #### updated
 
@@ -131,6 +139,8 @@ Parameter **opts** is an object composed of the following properties:
 }
 ```
 
+Any error thrown \(or returning a rejected promise\) will be logged but will not prevent the page from being updated internally.
+
 #### deleted
 
 Upon deletion of a page.
@@ -157,6 +167,8 @@ Parameter opts is an object composed of the following properties:
     creatorEmail: String // The email address of the user that first created the page
 }
 ```
+
+Any error thrown \(or returning a rejected promise\) will be logged but will not prevent the page from being deleted internally.
 
 #### renamed
 
@@ -190,4 +202,6 @@ Parameter opts is an object composed of the following properties:
     creatorEmail: String // The email address of the user that first created the page
 }
 ```
+
+Any error thrown \(or returning a rejected promise\) will be logged but will not prevent the page from being renamed internally.
 
