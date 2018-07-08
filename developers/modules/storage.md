@@ -1,14 +1,45 @@
 # Storage
 
-### Base Class Example
+A storage module connects Wiki.js with a local or remote storage provider, to act as backup or source of truth for content. It consists of properties that can be set by the user as well as methods that are called on certain events, such as to create, update and delete content.
 
+Storage modules are located in `/server/modules/storage`.
+
+A unique folder is created for each module. The folder contains two files:
+
+* **definition.yml**
+* **storage.js**
+
+## definition.yml
+
+This file contains information about your module.
+
+{% code-tabs %}
+{% code-tabs-item title="definition.yml" %}
+```yaml
+key: example
+title: Example Storage
+author: John Doe
+props:
+  firstExampleProperty: String
+  secondExampleProperty: Number
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+### Properties
+
+* **key**: A short, unique and camelCase-formatted name for this module.
+* **title**: The full name of the module.
+* **props**: An object of user editable properties. See [Module Properties](properties.md) for more info.
+
+## storage.js
+
+This file contains methods that will be called when a new page is created, modified, deleted, etc.
+
+{% code-tabs %}
+{% code-tabs-item title="storage.js" %}
 ```javascript
 module.exports = {
-  key: 'example',
-  title: 'Example Storage',
-  props: {
-​
-  },
   async activated (opts) {
 ​
   },
@@ -32,12 +63,8 @@ module.exports = {
   }
 }
 ```
-
-### Properties
-
-* **key**: A short, unique and camelCase-formatted name for this module.
-* **title**: The full name of the module.
-* **props**: An object of user editable properties. See [Module Properties](properties.md) for more info.
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 ### Events
 
