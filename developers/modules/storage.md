@@ -28,8 +28,9 @@ props:
 
 ### Properties
 
-* **key**: A short, unique and camelCase-formatted name for this module.
+* **key**: A short, unique and camelCase-formatted name for this module. It must match exactly the module folder name!
 * **title**: The full name of the module.
+* **author**: The name of the author of the module.
 * **props**: An object of user editable properties. See [Module Properties](properties.md) for more info.
 
 ## storage.js
@@ -66,9 +67,9 @@ module.exports = {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### Events
+All methods are required and must be implemented.
 
-#### activated
+### activated
 
 Upon activation of the storage module from the administration area. This is usually where storage prerequisites are checked _\(e.g. check settings, try to connect, create container, initialize repository, etc.\)._ 
 
@@ -80,7 +81,7 @@ Parameter **opts** is an object containing the configuration of the storage stra
 
 Any error thrown \(or returning a rejected promise\) will be reported to the user and the storage strategy will not be enabled.
 
-#### deactivated
+### deactivated
 
 Upon deactivation of the storage module from the administration area. This is where you disconnect from the storage provider if required. You should **never delete any content** upon deactivation, as the user may choose to re-enable this storage strategy later or simply want to keep the current content as backup.
 
@@ -92,7 +93,7 @@ Parameter **opts** is an object containing the configuration of the storage stra
 
 Any error thrown \(or returning a rejected promise\) will be reported to the user and the storage strategy will not be disabled.
 
-#### init
+### init
 
 Upon initialization of Wiki.js \(both startups or restarts\) and directly after the `activated` event. This is useful to establish a connection in some storage strategies.
 
@@ -104,7 +105,7 @@ Parameter **opts** is an object containing the configuration of the storage stra
 
 Any error thrown \(or returning a rejected promise\) will prevent the storage strategy from being used until Wiki.js is restarted or the error is acknowledged by the user in the administration area.
 
-#### created
+### created
 
 Upon creation of a new page.
 
@@ -134,7 +135,7 @@ Parameter **opts** is an object composed of the following properties:
 
 Any error thrown \(or returning a rejected promise\) will be logged but will not prevent the page from being created internally.
 
-#### updated
+### updated
 
 Upon modification of a page contents.
 
@@ -168,7 +169,7 @@ Parameter **opts** is an object composed of the following properties:
 
 Any error thrown \(or returning a rejected promise\) will be logged but will not prevent the page from being updated internally.
 
-#### deleted
+### deleted
 
 Upon deletion of a page.
 
@@ -197,7 +198,7 @@ Parameter opts is an object composed of the following properties:
 
 Any error thrown \(or returning a rejected promise\) will be logged but will not prevent the page from being deleted internally.
 
-#### renamed
+### renamed
 
 Upon rename of a page or when a page is moved to another location.
 
