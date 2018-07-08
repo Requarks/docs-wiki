@@ -9,22 +9,25 @@ module.exports = {
   props: {
 ​
   },
-  activated(opts) {
+  async activated (opts) {
 ​
   },
-  deactivated(opts) {
+  async deactivated (opts) {
 ​
   },
-  created(opts) {
+  async init (opts) {
+  
+  },
+  async created (opts) {
 ​
   },
-  updated(opts) {
+  async updated (opts) {
 ​
   },
-  deleted(opts) {
+  async deleted (opts) {
 ​
   },
-  renamed(opts) {
+  async renamed (opts) {
 ​
   }
 }
@@ -37,4 +40,66 @@ module.exports = {
 * **props**: An object of user editable properties. See [Module Properties](properties.md) for more info.
 
 ### Events
+
+#### activated
+
+Upon activation of the storage module from the administration area. This is usually where storage prerequisites are checked _\(e.g. check settings, try to connect, create container, initialize repository, etc.\)._ 
+
+```javascript
+async activated (opts) { }
+```
+
+Any error thrown \(or returning a rejected promise\) will be reported to the user and the storage strategy will not be enabled.
+
+#### deactivated
+
+Upon deactivation of the storage module from the administration area. This is where you disconnect from the storage provider if required. You should **never delete any content** upon deactivation, as the user may choose to re-enable this storage strategy later or simply want to keep the current content as backup.
+
+```javascript
+async deactivated (opts) { }
+```
+
+Any error thrown \(or returning a rejected promise\) will be reported to the user and the storage strategy will not be disabled.
+
+#### init
+
+Upon initialization of Wiki.js \(both startups or restarts\) and directly after the `activated` event. This is useful to establish a connection in some storage strategies.
+
+```javascript
+async init (opts) { }
+```
+
+Any error thrown \(or returning a rejected promise\) will prevent the storage strategy from being used until Wiki.js is restarted or the error is acknowledged by the user in the administration area.
+
+#### created
+
+Upon creation of a new page.
+
+```javascript
+async created (opts) { }
+```
+
+#### updated
+
+Upon modification of a page contents.
+
+```javascript
+async updated (opts) { }
+```
+
+#### deleted
+
+Upon deletion of a page.
+
+```javascript
+async deleted (opts) { }
+```
+
+#### renamed
+
+Upon rename of a page or when a page is moved to another location.
+
+```javascript
+async renamed (opts) { }
+```
 
