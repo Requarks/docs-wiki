@@ -41,25 +41,25 @@ This file contains methods that will be called when a new page is created, modif
 {% code-tabs-item title="storage.js" %}
 ```javascript
 module.exports = {
-  async activated (opts) {
+  async activated () {
 ​
   },
-  async deactivated (opts) {
+  async deactivated () {
 ​
   },
-  async init (opts) {
+  async init () {
   
   },
-  async created (opts) {
+  async created () {
 ​
   },
-  async updated (opts) {
+  async updated () {
 ​
   },
-  async deleted (opts) {
+  async deleted () {
 ​
   },
-  async renamed (opts) {
+  async renamed () {
 ​
   }
 }
@@ -74,10 +74,10 @@ All methods are required and must be implemented.
 Upon activation of the storage module from the administration area. This is usually where storage prerequisites are checked _\(e.g. check settings, try to connect, create container, initialize repository, etc.\)._ 
 
 ```javascript
-async activated (opts) { }
+async activated () { }
 ```
 
-Parameter **opts** is an object containing the configuration of the storage strategy. For example, if you defined properties `clientId` and `clientSecret` for the module props, `opts` will be an object with properties `clientId` and `clientSecret` containing the values entered by the user in the administration area.
+Use **this.config** inside the method to access the configuration of the storage strategy. For example, if you defined properties `clientId` and `clientSecret` for the module props, `this.config` will be an object with properties `clientId` and `clientSecret` containing the values entered by the user in the administration area.
 
 Any error thrown \(or returning a rejected promise\) will be reported to the user and the storage strategy will not be enabled.
 
@@ -89,7 +89,7 @@ Upon deactivation of the storage module from the administration area. This is wh
 async deactivated (opts) { }
 ```
 
-Parameter **opts** is an object containing the configuration of the storage strategy. See the [activated](storage.md#activated) event for more details.
+**this.config** is an object containing the configuration of the storage strategy. See the [activated](storage.md#activated) event for more details.
 
 Any error thrown \(or returning a rejected promise\) will be reported to the user and the storage strategy will not be disabled.
 
@@ -101,7 +101,7 @@ Upon initialization of Wiki.js \(both startups or restarts\) and directly after 
 async init (opts) { }
 ```
 
-Parameter **opts** is an object containing the configuration of the storage strategy. See the [activated](storage.md#activated) event for more details.
+**this.config** is an object containing the configuration of the storage strategy. See the [activated](storage.md#activated) event for more details.
 
 Any error thrown \(or returning a rejected promise\) will prevent the storage strategy from being used until Wiki.js is restarted or the error is acknowledged by the user in the administration area.
 
@@ -113,23 +113,29 @@ Upon creation of a new page.
 async created (opts) { }
 ```
 
-Parameter **opts** is an object composed of the following properties:
+Use **this** context inside the method to access following properties:
 
 ```javascript
 {
-    id: Number, // Unique ID of the page
-    path: String, // Unique path of the page (e.g. /some/page)
-    title: String, // Title of the page
-    description: String, // Short description of the page
-    isPublished: Boolean, // Is the page published
-    publishStartDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
-    publishEndDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
-    contentType: String, // The content original type (e.g. markdown, html, etc.)
-    content: String, // The content
-    createdAt: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
-    authorId: Number, // The Unique ID of the author
-    authorName: String, // The full name of the author
-    authorEmail: String // The email address of the author
+    config: Object, // Object containing the storage configuration
+    mode: String, // Sync mode (push, pull or sync)
+    page: {
+        id: Number, // Unique ID of the page
+        locale: String, // 2 letter code (e.g. en)
+        path: String, // Unique path of the page (e.g. /some/page)
+        title: String, // Title of the page
+        description: String, // Short description of the page
+        isPrivate: Boolean, // Is the page inside the user private namespace
+        isPublished: Boolean, // Is the page published
+        publishStartDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
+        publishEndDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
+        contentType: String, // The content original type (e.g. markdown, html, etc.)
+        content: String, // The content
+        createdAt: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
+        authorId: Number, // The Unique ID of the author
+        authorName: String, // The full name of the author
+        authorEmail: String // The email address of the author
+    }
 }
 ```
 
@@ -143,7 +149,7 @@ Upon modification of a page contents.
 async updated (opts) { }
 ```
 
-Parameter **opts** is an object composed of the following properties:
+Use **this** context inside the method to access following properties:
 
 ```javascript
 {
@@ -177,7 +183,7 @@ Upon deletion of a page.
 async deleted (opts) { }
 ```
 
-Parameter opts is an object composed of the following properties:
+Use **this** context inside the method to access following properties:
 
 ```javascript
 {
@@ -206,7 +212,7 @@ Upon rename of a page or when a page is moved to another location.
 async renamed (opts) { }
 ```
 
-Parameter opts is an object composed of the following properties:
+Use **this** context inside the method to access following properties:
 
 ```javascript
 {
