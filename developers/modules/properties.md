@@ -23,6 +23,11 @@ props:
     propertyWithDefault:
         type: Boolean
         default: true
+    propertyWithTitleHint:
+        type: String
+        default: 'abc'
+        title: 'Property Title'
+        hint: 'An explanation of the field.'
     propertyWithEnumList:
         type: String,
         default: 'first'
@@ -51,4 +56,12 @@ The default value is **optional**. If omitted, the type default value will be in
 #### enum
 
 The enum value is **optional**. If provided, it must be an **array of strings**. A dropdown select will be presented to the user with the values of the array as possible choices. When using enum, the `default` value must be provided as well.
+
+#### title
+
+The title value is **optional**. If omitted, the title will be inferred from the property name with a start case formatting applied.
+
+#### hint
+
+The hint value is **optional**. The hint is displayed below the text field to provide the user with helpful info.
 
