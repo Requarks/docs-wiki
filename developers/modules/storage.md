@@ -121,8 +121,8 @@ Use **this** context inside the method to access following properties:
     mode: String, // Sync mode (push, pull or sync)
     page: {
         id: Number, // Unique ID of the page
-        locale: String, // 2 letter code (e.g. en)
-        path: String, // Unique path of the page (e.g. /some/page)
+        locale: String, // 2 letter code (e.g. en). Empty if locale disabled
+        path: String, // Unique path of the page (e.g. some/page)
         title: String, // Title of the page
         description: String, // Short description of the page
         isPrivate: Boolean, // Is the page inside the user private namespace
@@ -154,9 +154,11 @@ Use **this** context inside the method to access following properties:
 ```javascript
 {
     id: Number, // Unique ID of the page
-    path: String, // Unique path of the page (e.g. /some/page)
+    locale: String, // 2 letter code (e.g. en). Empty if locale disabled
+    path: String, // Unique path of the page (e.g. some/page)
     title: String, // Title of the page
     description: String, // Short description of the page
+    isPrivate: Boolean, // Is the page inside the user private namespace
     isPublished: Boolean, // Is the page published
     publishStartDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
     publishEndDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
@@ -188,9 +190,11 @@ Use **this** context inside the method to access following properties:
 ```javascript
 {
     id: Number, // Unique ID of the page
-    path: String, // Unique path of the page (e.g. /some/page)
+    locale: String, // 2 letter code (e.g. en). Empty if locale disabled
+    path: String, // Unique path of the page (e.g. some/page)
     title: String, // Title of the page
     description: String, // Short description of the page
+    isPrivate: Boolean, // Is the page inside the user private namespace
     createdAt: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
     deletedAt: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
     authorId: Number, // The Unique ID of the author (user deleting the page)
@@ -217,10 +221,12 @@ Use **this** context inside the method to access following properties:
 ```javascript
 {
     id: Number, // Unique ID of the page
-    sourcePath: String, // Previous path of the page (e.g. /some/oldpage)
-    destinationPath: String, // New path of the page (e.g. /some/newpage)
+    locale: String, // 2 letter code (e.g. en). Empty if locale disabled
+    sourcePath: String, // Previous path of the page (e.g. some/oldpage)
+    destinationPath: String, // New path of the page (e.g. some/newpage)
     title: String, // Title of the page
     description: String, // Short description of the page
+    isPrivate: Boolean, // Is the page inside the user private namespace
     isPublished: Boolean, // Is the page published
     publishStartDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
     publishEndDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
