@@ -26,6 +26,7 @@
 ## Developers
 
 * [Modules](developers/modules/README.md)
+  * [Introduction](developers/modules/introduction.md)
   * [Authentication](developers/modules/authentication.md)
   * [Storage](developers/modules/storage.md)
   * [Properties](developers/modules/properties.md)
