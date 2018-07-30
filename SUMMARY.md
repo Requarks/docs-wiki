@@ -25,6 +25,7 @@
 
 ## Developers
 
+* [Getting Started](developers/getting-started.md)
 * [Modules](developers/modules/README.md)
   * [Introduction](developers/modules/introduction.md)
   * [Authentication](developers/modules/authentication.md)
