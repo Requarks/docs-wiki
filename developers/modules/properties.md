@@ -2,7 +2,7 @@
 
 Module properties are settings that can be changed by the user from the administration area.
 
-A property must be in **camelCase**. They must be assigned a `type`, and optionally a `default` value and `enum` list.
+A property must be in **camelCase**. They must be assigned a `type`, and optionally a `default` value, `title`, `hint` and `enum` list.
 
 ### Property Types
 
