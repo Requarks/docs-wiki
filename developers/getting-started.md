@@ -31,6 +31,8 @@ This will start Wiki.js in dev mode. Client assets are compiled first \(using We
 
 Browse to the site, using the configuration you defined in `config.yml`. For example, if using port 3000 on your local machine, you would browse to http://127.0.0.1:3000/.
 
+The first time you load the wiki, you'll get greeted with the setup wizard. Complete all the steps to finish the installation.
+
 ### Development
 
 Any changes made to client files will automatically trigger a build and the site will be updated live automatically. If the changes cannot be replaced inline, the page will reload automatically.
