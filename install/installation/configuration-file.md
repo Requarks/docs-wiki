@@ -12,7 +12,7 @@ The configuration file is located at the root, named `config.yml`. Environment v
 ## General Site Settings
 
 | **Property** | **Required** | **Description** | **Default Value** |
-| --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | **title** | yes | The title of the website. Displayed in the navigation bar. | Wiki |
 | **host** | yes | The full hostname of the site, as accessed by the user. Do not add a trailing slash. You must add the port if you expect users to access your wiki via a non-standard port. | [http://localhost](http://localhost/) |
 | **port** | no | The port on which the server should listen to. You can also use the environment variable PORT using $\(PORT\). | 80 |
@@ -25,7 +25,7 @@ The configuration file is located at the root, named `config.yml`. Environment v
 Wiki.js offers various authentication providers that you can enable. See the [authentication guide](https://docs-legacy.requarks.io/wiki/install/authentication) to learn how to get the necessary info for each provider.
 
 | **Property** | **Required** | **Description** | **Default Value** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | **public** | yes | Should the wiki be accessible publicly without a login. If set to true, creates a Guest user whose access can be configured in the Users Settings. Set to false to require all users to login before accessing any wiki content. | false |
 | **defaultReadAccess** | yes | Should users that logged in using a social authentication provider have read-only access by default. | false |
 | **auth.local.enabled** | no | Enable the local authentication provider. | true |
@@ -62,7 +62,7 @@ Wiki.js offers various authentication providers that you can enable. See the [au
 ## Database {#database}
 
 | **Property** | **Required** | **Description** | **Default Value** |
-| --- | --- |
+| :--- | :--- | :--- | :--- |
 | **db** | yes | The MongoDB-formatted [connection string](https://docs-legacy.requarks.io/wiki/install/database). |  |
 
 ## Git Repository {#git-repository}
@@ -70,7 +70,7 @@ Wiki.js offers various authentication providers that you can enable. See the [au
 Wiki.js works with pretty much any Git repository. See the [Git repository guide](https://docs-legacy.requarks.io/wiki/install/git) to learn how to get the necessary info from the most popular providers.
 
 | **Property** | **Required** | **Description** | **Default Value** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | **git.url** | yes | The full URL to your Git repository where all content will be synced. |  |
 | **git.branch** | yes | The branch of your Git repository to sync. | master |
 | **git.auth.type** | yes | The type of authentication to use when connecting to your Git repository. Valid values: `basic` or `ssh` | basic |
@@ -86,7 +86,7 @@ Wiki.js works with pretty much any Git repository. See the [Git repository guide
 You can enable / disable specific optional features.
 
 | **Property** | **Required** | **Description** | **Default Value** |
-| --- | --- |
+| :--- | :--- | :--- | :--- |
 | **features.mathjax** | no | Enable math equations processing \(in TeX and MathML formats\) and display them as SVG graphics. | true |
 
 ## Logging {#logging}
@@ -94,7 +94,7 @@ You can enable / disable specific optional features.
 By default, all logs are stored locally in the `/logs` directory. You can send logs to additional remote logging services:
 
 | **Property** | **Required** | **Description** | **Default Value** |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | **externalLogging.bugsnag** | no | Key to use for Bugsnag |  |
 | **externalLogging.loggly.token** | no | Token to use for Loggly |  |
 | **externalLogging.loggly.subdomain** | no | Subdomain to use for Loggly |  |

@@ -268,3 +268,7 @@ git:
     email: marty@example.com
 ```
 
+{% hint style="danger" %}
+When using docker, make sure to have a proper backup strategy or to mount the `/var/wiki/repo` directory outside the container so that your content is preserved in the event the container is recreated.
+{% endhint %}
+
