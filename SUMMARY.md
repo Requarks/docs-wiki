@@ -14,6 +14,7 @@
 * [Authentication](modules/authentication.md)
 * [Editors](modules/editors.md)
 * [Logging](modules/logging.md)
+* [Rendering](modules/rendering.md)
 * [Storage](modules/storage.md)
 * [Search](modules/search.md)
 
