@@ -24,9 +24,9 @@ At least **1 GB** of storage dedicated to Wiki.js is recommended.
 
 ### Node.js
 
-Node.js **8.11** or later is required. Wiki.js will not run on older versions such as 6.x or 4.x!
+Node.js **10.10** or later is required. Wiki.js will not run on older versions such as 6.x or 4.x!
 
-* ​[Official Website](https://nodejs.org/)​
+* [Node.js Website](https://nodejs.org/)​
 * ​[Installation using the package manager \(Linux\)](https://nodejs.org/en/download/package-manager/)​
 
 {% hint style="info" %}
