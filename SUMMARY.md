@@ -30,6 +30,7 @@
   * [Introduction](developers/modules/introduction.md)
   * [Authentication](developers/modules/authentication.md)
   * [Logging](developers/modules/logging.md)
+  * [Rendering](developers/modules/rendering.md)
   * [Storage](developers/modules/storage.md)
   * [Properties](developers/modules/properties.md)
 * [Changelog](developers/changelog.md)
