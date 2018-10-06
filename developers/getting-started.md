@@ -65,7 +65,7 @@ _e.g._ `docker-dev-rebuild` becomes `docker:dev:rebuild`
 
 ### Run the project
 
-From the project folder, simply run `npm run dev`
+From the project folder, simply run `yarn dev`
 
 This will start Wiki.js in dev mode. Client assets are compiled first \(using Webpack\), then the server will start automatically. Wait for this process to complete before loading the app!
 
