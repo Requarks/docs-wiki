@@ -27,7 +27,7 @@ props:
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### Properties {#properties}
+### Properties <a id="properties"></a>
 
 * **key**: A short, unique and camelCase-formatted name for this module. It must match exactly the module folder name!
 * **title**: The full name of the module.

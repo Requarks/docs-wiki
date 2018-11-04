@@ -9,7 +9,7 @@ A unique folder is created for each module. The folder contains two files:
 * **definition.yml**
 * **logger.js**
 
-## definition.yml {#definition-yml}
+## definition.yml <a id="definition-yml"></a>
 
 This file contains information about your module.
 
@@ -30,7 +30,7 @@ props:
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### Properties {#properties}
+### Properties <a id="properties"></a>
 
 * **key**: A short, unique and lowercase name for this module. It must match exactly the module folder name! _Do not use spaces or special characters._
 * **title**: The full name of the module.
@@ -45,7 +45,7 @@ props:
   * `debug`
 * **props**: An object of user editable properties. See [Module Properties](https://docs.requarks.io/wiki/v/2.x/developers/modules/properties) for more info.
 
-## logger.js {#authentication-js}
+## logger.js <a id="authentication-js"></a>
 
 This file contains methods that will be called upon initialization.
 
@@ -74,7 +74,7 @@ module.exports = {
 
  All methods are required and must be implemented.
 
-### init {#init}
+### init <a id="init"></a>
 
  Upon initialization of Wiki.js \(both startups or restarts\).
 

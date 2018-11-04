@@ -48,12 +48,88 @@ You'll be prompted where Wiki.js should be installed. The destination folder wil
 #### Using the official Docker image
 
 ```bash
-sudo docker run -p 8080:3000 -v /home/bob/wiki-config.yml:/var/wiki/config.yml requarks/wiki
+docker run -d -p 8080:3000 --name wiki --restart unless-stopped requarks/wiki:dev
 ```
 
-#### Using a custom Dockerfile
+#### Environment Variables
+
+* **PORT** : Port to listen to \(HTTP\)
+* **DB\_TYPE** : Type of database \(`mysql`, `postgres`, `mariadb`, `mssql` or `sqlite`\)
+* **DB\_HOST** : Hostname or IP of the database
+* **DB\_PORT** : Port of the database
+* **DB\_USER** : Username to connect to the database
+* **DB\_PASS** : Password to connect to the database
+* **DB\_NAME** : Database name
+* **DB\_FILEPATH** : Path to the SQLite file _\(SQLite only\)_
+* **REDIS\_HOST** : Hostname or IP of the redis instance
+* **REDIS\_PORT** : Port of the redis instance
+* **REDIS\_DB** : Database Index of the redis instance _\(number\)_
+* **REDIS\_PASSWORD** : Password to connect to the redis instance _\(optional\)_
 
 #### Using Docker Compose
+
+Here's an example of a Docker Compose file with Redis and PostgreSQL dependencies:
+
+{% code-tabs %}
+{% code-tabs-item title="docker-compose.yml" %}
+```yaml
+version: "3"
+services:
+
+  redis:
+    image: redis:4-alpine
+    ports:
+      - "6379:6379"
+    logging:
+      driver: "none"
+    networks:
+      - wikinet
+
+  db:
+    image: postgres:9-alpine
+    environment:
+      POSTGRES_DB: wiki
+      POSTGRES_PASSWORD: wikijsrocks
+      POSTGRES_USER: wikijs
+    logging:
+      driver: "none"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - wikinet
+    ports:
+      - "5432:5432"
+
+  wiki:
+    image: requarks/wiki
+    depends_on:
+      - db
+      - redis
+    environment:
+      PORT: 3000
+      DB_TYPE: postgres
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: wikijs
+      DB_PASS: wikijsrocks
+      DB_NAME: wiki
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_DB: 0
+    networks:
+      - wikinet
+    ports:
+      - "3000:3000"
+
+networks:
+  wikinet:
+
+volumes:
+  db-data:
+
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 {% endtab %}
 
 {% tab title="Heroku" %}
