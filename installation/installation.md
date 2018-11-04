@@ -47,6 +47,10 @@ You'll be prompted where Wiki.js should be installed. The destination folder wil
 {% tab title="Docker" %}
 #### Using the official Docker image
 
+Wiki.js is published as a Docker image on Docker Hub as `requarks/wiki`
+
+Here's an example of a command to run Wiki.js:
+
 ```bash
 docker run -d -p 8080:3000 --name wiki --restart unless-stopped requarks/wiki:dev
 ```
