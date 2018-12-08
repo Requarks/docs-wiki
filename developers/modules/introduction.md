@@ -8,8 +8,8 @@ In-depth guides for available for each module type:
 
 * [Authentication](authentication.md)
 * Editor
-* Logging
-* Rendering
+* [Logging](logging.md)
+* [Rendering](rendering.md)
 * Search Engine
 * [Storage](storage.md)
 
