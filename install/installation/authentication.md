@@ -10,13 +10,13 @@ Wiki.js supports multiple authentication providers. You may choose to enable one
  You must have at least 1 provider enabled as edits can only be performed while authenticated.
 {% endhint %}
 
-## Local {#local}
+## Local <a id="local"></a>
 
 The local provider stores user accounts in the wiki database. It does not rely on any 3rd party service and accounts are unique to your wiki.
 
 This is the most simple solution and **is enabled by default**.
 
-## Microsoft Account {#microsoft-account}
+## Microsoft Account <a id="microsoft-account"></a>
 
 The Microsoft Account provider lets users login using their own Microsoft account.
 
@@ -133,7 +133,7 @@ slack:
     clientSecret: SLACK_CLIENT_SECRET
 ```
 
-## LDAP \(Active Directory\) {#ldap-active-directory}
+## LDAP \(Active Directory\) <a id="ldap-active-directory"></a>
 
 The LDAP provider lets users login using their LDAP / Active Directory account.
 
@@ -159,7 +159,7 @@ For Active Directory, you should usually use the `samaccountname` in the `search
 
 The user must have an email address associated with the account, or sign in will fail. This holds true regardless of `searchFilter` configuration.
 
-## Azure Active Directory {#azure-active-directory}
+## Azure Active Directory <a id="azure-active-directory"></a>
 
 
 

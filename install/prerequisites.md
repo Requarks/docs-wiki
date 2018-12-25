@@ -30,7 +30,7 @@ Wiki.js runs on pretty much any platform that supports the requirements below. H
 
 Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.
 
- **Node.js** `6.11.1` **or later is required.**
+ **Node.js** `6.11.1` **to** `10.x` **is required.** 
 
 * [Official Website](https://nodejs.org/)
 * [Installation using the package manager \(Linux\)](https://nodejs.org/en/download/package-manager/)
@@ -60,7 +60,7 @@ Even though Linux usually comes with Git pre-installed, it is most likely an out
 
 You can download the [latest version](https://git-scm.com/downloads) from the official Git website.
 
-### An empty Git repository \(optional\) {#an-empty-git-repository-optional}
+### An empty Git repository \(optional\) <a id="an-empty-git-repository-optional"></a>
 
 All content created in the Wiki is saved locally and synced regularly to a remote Git repository.  
 Any Git repository will do, as long as the Wiki can connect to it using **basic** or **ssh** authentication.

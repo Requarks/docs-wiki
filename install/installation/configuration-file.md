@@ -59,13 +59,13 @@ Wiki.js offers various authentication providers that you can enable. See the [au
 | **auth.azure.tenant** | no | Azure AD tenant hostname. Usually `SOMETHING.onmicrosoft.com` |  |
 | **sessionSecret** | yes | A randomly generated string, used when encrypting sessions. 256-bit keys are usually a good choice. You can use this [key generator](http://randomkeygen.com/) to generate one. |  |
 
-## Database {#database}
+## Database <a id="database"></a>
 
 | **Property** | **Required** | **Description** | **Default Value** |
 | :--- | :--- | :--- | :--- |
 | **db** | yes | The MongoDB-formatted [connection string](https://docs-legacy.requarks.io/wiki/install/database). |  |
 
-## Git Repository {#git-repository}
+## Git Repository <a id="git-repository"></a>
 
 Wiki.js works with pretty much any Git repository. See the [Git repository guide](https://docs-legacy.requarks.io/wiki/install/git) to learn how to get the necessary info from the most popular providers.
 
@@ -81,7 +81,7 @@ Wiki.js works with pretty much any Git repository. See the [Git repository guide
 | **git.serverEmail** | yes | The default/fallback email address to use as the author when committing changes to your Git repository. |  |
 | **git.showUserEmail** | yes | Should the commit author email be set to the current user. | true |
 
-## Features {#features}
+## Features <a id="features"></a>
 
 You can enable / disable specific optional features.
 
@@ -89,7 +89,7 @@ You can enable / disable specific optional features.
 | :--- | :--- | :--- | :--- |
 | **features.mathjax** | no | Enable math equations processing \(in TeX and MathML formats\) and display them as SVG graphics. | true |
 
-## Logging {#logging}
+## Logging <a id="logging"></a>
 
 By default, all logs are stored locally in the `/logs` directory. You can send logs to additional remote logging services:
 
@@ -103,5 +103,5 @@ By default, all logs are stored locally in the `/logs` directory. You can send l
 | **externalLogging.rollbar** | no | Key to use for Rollbar |  |
 | **externalLogging.sentry** | no | Key to use for Sentry |  |
 
-##  {#database}
+##  <a id="database"></a>
 

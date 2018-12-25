@@ -28,7 +28,7 @@ Public: **Yes \(free\)**
 Private: **Paid only**  
 Supported authentication methods: **SSH and Basic**
 
-{% embed data="{\"url\":\"https://github.com/\",\"type\":\"link\",\"title\":\"Build software better, together\",\"description\":\"GitHub is where people build software. More than 27 million people use GitHub to discover, fork, and contribute to over 80 million projects.\",\"icon\":{\"type\":\"icon\",\"url\":\"https://github.com/fluidicon.png\",\"aspectRatio\":0},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://assets-cdn.github.com/images/modules/open\_graph/github-logo.png\",\"width\":1200,\"height\":1200,\"aspectRatio\":1}}" %}
+{% embed url="https://github.com/" %}
 
 #### Using SSH \(Repository\)
 
@@ -74,7 +74,7 @@ Public: **Yes \(free\)**
 Private: **Yes \(free\)**  
 Supported authentication methods: **SSH and Basic**
 
-{% embed data="{\"url\":\"https://gitlab.com/\",\"type\":\"link\",\"title\":\"The only single product for the complete DevOps lifecycle - GitLab\",\"description\":\"“GitLab is the leading integrated product for modern software development. Connecting issue management, version control, code review, CI, CD, and monitoring into a single, easy-to-install application, we help teams go faster from planning to monitoring.”\",\"icon\":{\"type\":\"icon\",\"url\":\"https://about.gitlab.com/ico/favicon-192x192.png\",\"width\":192,\"height\":192,\"aspectRatio\":1},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://about.gitlab.com/images/blogimages/gitlab-blog-cover.png\",\"width\":1750,\"height\":1225,\"aspectRatio\":0.7}}" %}
+{% embed url="https://gitlab.com/" %}
 
 #### Using SSH \(Repository\)
 
@@ -118,7 +118,7 @@ Public: **Yes \(free, up to 5 users\)**
 Private: **Yes \(free, up to 5 users\)**  
 Supported authentication methods: **SSH and Basic**
 
-{% embed data="{\"url\":\"https://bitbucket.org/\",\"type\":\"link\",\"title\":\"Bitbucket \| The Git solution for professional teams\",\"description\":\"Collaborate on code with inline comments and pull requests. Manage and share your Git repositories to build and ship software, as a team.\",\"icon\":{\"type\":\"icon\",\"url\":\"https://bitbucket-marketing-cdn.atlassian.com/assets/img/favicons/bitbucket/apple-touch-icon.png\",\"width\":180,\"height\":180,\"aspectRatio\":1},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://bitbucket-marketing-cdn.atlassian.com/dam/jcr:1437c132-1dbc-410d-b6a6-cb7fce8f2775/bitbucket\_rgb\_darkblue\_atlassian\_1200x630.png\",\"width\":1200,\"height\":630,\"aspectRatio\":0.525}}" %}
+{% embed url="https://bitbucket.org/" %}
 
 ### Visual Studio Team Services
 
@@ -126,7 +126,7 @@ Public: **No**
 Private: **Yes \(free, up to 5 users\)**  
 Supported authentication methods: **SSH and Basic**
 
-{% embed data="{\"url\":\"https://visualstudio.com/\",\"type\":\"link\",\"title\":\"Visual Studio IDE, Code Editor, VSTS, & App Center\",\"description\":\"Visual Studio dev tools & services make app development easy for any platform & language. Try our Mac & Windows code editor, IDE, or VSTS for free.\",\"icon\":{\"type\":\"icon\",\"url\":\"https://www.visualstudio.com/wp-content/uploads/2017/02/BrandVisualStudioIDE2017RTW\_64x.png\",\"width\":144,\"height\":144,\"aspectRatio\":1},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://www.visualstudio.com/wp-content/uploads/2017/03/AttachFileHandler.png\",\"width\":800,\"height\":418,\"aspectRatio\":0.5225}}" %}
+{% embed url="https://visualstudio.com/" %}
 
 #### Using SSH
 

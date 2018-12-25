@@ -4,11 +4,11 @@ description: How to use blockquotes
 
 # Blockquotes
 
-## What is blockquote {#what-is-blockquote}
+## What is blockquote <a id="what-is-blockquote"></a>
 
 A blockquote is originally used to define a section that is quoted from another source. However, Wiki.js offers many additional options to the blockquote.
 
-## How to define a blockquote {#how-to-define-a-blockquote}
+## How to define a blockquote <a id="how-to-define-a-blockquote"></a>
 
 Simply begin your line of text with a **&gt;**
 
@@ -27,9 +27,9 @@ For example, the following markdown text:
 
  would result in:
 
-![](../.gitbook/assets/image.png)
+![](../.gitbook/assets/image%20%281%29.png)
 
-## Available stylings {#available-stylings}
+## Available stylings <a id="available-stylings"></a>
 
 Various styling options are available.  Simply add the desired styling class below your blockquote:
 
@@ -49,5 +49,5 @@ Various styling options are available.  Simply add the desired styling class bel
 {.is-danger}
 ```
 
-![](../.gitbook/assets/image%20%281%29.png)
+![](../.gitbook/assets/image.png)
 

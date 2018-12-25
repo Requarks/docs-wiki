@@ -4,11 +4,11 @@ description: How to manage user access rights
 
 # Manage Access Rights
 
-## What are access rights? {#what-are-access-rights}
+## What are access rights? <a id="what-are-access-rights"></a>
 
 When you create or authorize a user in the system, that user has read-only permissions on all pages. Access rights is a list of permissions that are assigned to a user which define what he can or cannot do.
 
-##  View access rights {#view-access-rights}
+##  View access rights <a id="view-access-rights"></a>
 
 From the **Users** page, click on the **name** of the account you want to view.
 
