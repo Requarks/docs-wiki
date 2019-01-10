@@ -10,8 +10,8 @@ description: How to install Wiki.js on your server
 
 ## Installation
 
-{% tabs %}
-{% tab title="Linux / macOS" %}
+### Linux / macOS
+
 **Create an empty folder** where Wiki.js should be installed.
 
 From this folder, in a command prompt, **run** the following command:
@@ -20,11 +20,11 @@ From this folder, in a command prompt, **run** the following command:
 curl -sSo- https://wiki.js.org/install.sh | bash
 ```
 
- Wiki.js will be installed in the current directory.
-{% endtab %}
+Wiki.js will be installed in the current directory.
 
-{% tab title="Windows" %}
- From a **PowerShell** prompt, **run** the following command:
+### Windows
+
+From a **PowerShell** prompt, **run** the following command:
 
 ```csharp
 iex ((New-Object System.Net.WebClient).DownloadString('https://wiki.js.org/install.ps1'))
@@ -38,8 +38,6 @@ You'll be prompted where Wiki.js should be installed. The destination folder wil
 Your powershell execution policy must be set to Bypass to allow this script to run:  
 `Set-ExecutionPolicy Bypass`
 {% endhint %}
-{% endtab %}
-{% endtabs %}
 
 ## Configuration
 
