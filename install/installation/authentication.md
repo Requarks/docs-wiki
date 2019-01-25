@@ -44,17 +44,11 @@ microsoft:
 
 The Google ID provider lets users login using their own Google ID.
 
-1. Go to [https://console.cloud.google.com/](https://console.cloud.google.com/)
-2. **Create** a new Project \(e.g. Wiki\).
-3. From the sidebar menu, click **API Manager**.
-4. Click on the **Enable API** button.
-5. Enable the **Google+ API**.
-6. From the sidebar menu, click **Credentials**.
-7. Under the **OAuth consent screen** tab, **fill in** the required info and click **Save**.
-8. Back to the **Credentials** tab, click on **Create credentials** &gt; **OAuth client Id**.
-9. Choose **Web Application** and enter a **name** \(e.g. Wiki\).
-10. Under **Restrictions**, enter the **authorised origin domain** of your wiki \(e.g. [https://www.example.com](https://www.example.com/)\) and the **authorised redirect URL** \(full URL of your wiki followed by `/login/google/callback` as e.g.: `http://www.example.com/login/google/callback`\)
-11. Click **Create** and take note of both the generated **Client ID** and **Client Secret**.
+1. Go to [https://developers.google.com/identity/sign-in/web/sign-in](https://developers.google.com/identity/sign-in/web/sign-in)
+2. Click on the **CONFIGURE A PROJECT** button.
+3. Select **Web Server** in the dropdown.
+4. Enter the **Authorized Redirect URI**, which is composed of `https://YOURSITE/login/google/callback`. For example, if your wiki is hosted on `https://wiki.example.com/`, the URL would be `https://wiki.example.com/login/google/callback`.
+5. Make note of the generated **Client ID** and **Client Secret**.
 
 Under the auth section of your config.yml, you can now enter the required info:
 
