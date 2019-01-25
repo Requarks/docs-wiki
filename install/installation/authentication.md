@@ -46,9 +46,10 @@ The Google ID provider lets users login using their own Google ID.
 
 1. Go to [https://developers.google.com/identity/sign-in/web/sign-in](https://developers.google.com/identity/sign-in/web/sign-in)
 2. Click on the **CONFIGURE A PROJECT** button.
-3. Select **Web Server** in the dropdown.
-4. Enter the **Authorized Redirect URI**, which is composed of `https://YOURSITE/login/google/callback`. For example, if your wiki is hosted on `https://wiki.example.com/`, the URL would be `https://wiki.example.com/login/google/callback`.
-5. Make note of the generated **Client ID** and **Client Secret**.
+3. Choose an existing project or create a new one.
+4. Once on the **Configure your OAuth client** screen, select **Web Server** in the dropdown.
+5. Enter the **Authorized Redirect URI**, which is composed of `https://YOURSITE/login/google/callback`. For example, if your wiki is hosted on `https://wiki.example.com/`, the URL would be `https://wiki.example.com/login/google/callback`.
+6. Make note of the generated **Client ID** and **Client Secret**.
 
 Under the auth section of your config.yml, you can now enter the required info:
 
